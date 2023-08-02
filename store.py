@@ -4,7 +4,7 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import streamlit as st
 uploaded_file = st.file_uploader("Choose a file")
 
-df = pd.read_csv("Groceries_dataset(1).csv")
+df = pd.read_csv("Groceries_dataset.csv")
 df['itemDescription']=df['itemDescription'].str.strip()
 df.Date = pd.to_datetime(df.Date)
 df['Member_number'] = df['Member_number'].astype('str')
